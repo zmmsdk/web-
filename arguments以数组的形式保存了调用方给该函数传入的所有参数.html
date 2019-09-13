@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    // argument  是函数内的固有变量，以数组的形式保存了调用方给该函数传入的所有参数
+
+    function haha(){
+      console.log(arguments);
+    }
+
+    haha(1,2,3);            //[1,2,3]
+
+    haha(1,2,'xixi','hehe')            //[1,2,'xixi',hehe]
+
+    haha(1,window);                  //[1,window]
+
+
+
+    // 同时argument比较常用的两个属性length  和callee   length 表示调用方传入了多少个参数   callee 表示当前函数本身
+// <!-- 
+//      function haha(){
+//       console.log(arguments.callee);
+//     }
+
+//     haha(1,2,3);            //[1,2,3]
+
+
+
+//          function haha(){
+//       console.log(arguments.length);
+//     }
+
+//     haha(1,2,3);  -->
+
+// 在 不设置形参的情况下  function haha  ()也可以设置参数   那些参数可以用参数名来取值
+// function haha(){
+//     alert(first);
+
+//      alert(second);
+
+//      console.log(arguments)
+
+// }
+
+
+
+    // var a = 10;
+    // var b = 20;
+    // var c = 30;
+    // console.log(a, b, c);
+
+
+    // function test(a, b, c) {
+    //   // 我们可以通过arguments 获取函数调用的时候的实参
+    //   // arguments非常像数组，但不是数组
+    //   console.log(arguments);
+    //   console.log(1);
+    // }
+
+    // test(4, 5, 6);
+    // 
+    // 
+    // 求任意个数的最大值
+
+
+    // getMax(数组)
+    
+    // function getMax() {
+    //   var max = arguments[0];
+    //   for (var i = 1; i < arguments.length; i++) {
+    //     if (max < arguments[i]) {
+    //       max = arguments[i];
+    //     }
+    //   }
+    //   return max;
+    // }
+
+    // var max = getMax(5, 10, 1, 5, 100);
+    // console.log(max);
+
+
+    // 求任意个数的和
+    // 声明函数
+    function getSum() {
+      var sum = 0;
+      for (var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+      return sum;
+    }
+
+    var sum = getSum(5, 1, 3, 4);//接收return  的值
+    console.log(sum);   //在控制台输出内容
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

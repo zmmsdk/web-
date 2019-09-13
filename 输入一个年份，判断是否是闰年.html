@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+
+
+
+
+
+
+      // 输入一个年份，判断是否是闰年[闰年：能被4整数并且不能被100整数，或者能被400整数]
+    function isRun(year) {
+      var result = false;
+      if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        result = true;
+      } 
+      return result;
+    }
+
+    console.log(isRun(2016));
+
+
+  
+     
+    
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
