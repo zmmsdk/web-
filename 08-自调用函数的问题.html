@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // ;(function () {
+    //   console.log(1);
+    // })()
+
+    // ;(function () {
+    //   console.log(2);
+    // })()
+    // 
+    // 自调用函数可以多次复用   可以调用函数本身
+    var fn = function () {
+      console.log(1);
+    }
+
+    ;
+    (function () {
+      console.log(2);
+    })();
+
+(function () {
+      console.log(3);
+    })()
+  </script>
+</body>
+</html>
